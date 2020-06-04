@@ -14,8 +14,8 @@ protocol HomeViewProtocol: class {
     var presenter: HomePresenterProtocol? { get set }
 }
 
-protocol HomeWireFrameProtocol: class {
-    // PRESENTER -> WIREFRAME
+protocol HomeRouterProtocol: class {
+    // PRESENTER -> Router
     static func createHomeModule() -> UIViewController
 }
 
@@ -23,7 +23,7 @@ protocol HomePresenterProtocol: class {
     // VIEW -> PRESENTER
     var view: HomeViewProtocol? { get set }
     var interactor: HomeInteractorInputProtocol? { get set }
-    var wireFrame: HomeWireFrameProtocol? { get set }
+    var router: HomeRouterProtocol? { get set }
     
     func viewDidLoad()
 }
@@ -37,6 +37,9 @@ protocol HomeInteractorInputProtocol: class {
     var presenter: HomeInteractorOutputProtocol? { get set }
     var localDatamanager: HomeLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: HomeRemoteDataManagerInputProtocol? { get set }
+    
+    // function to allow interactor manage data
+    func interactorGetData()
 }
 
 protocol HomeDataManagerInputProtocol: class {
@@ -46,6 +49,8 @@ protocol HomeDataManagerInputProtocol: class {
 protocol HomeRemoteDataManagerInputProtocol: class {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol? { get set }
+    
+    func externalGetData()
 }
 
 protocol HomeRemoteDataManagerOutputProtocol: class {

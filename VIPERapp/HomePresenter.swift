@@ -13,13 +13,14 @@ class HomePresenter  {
     // MARK: Properties
     weak var view: HomeViewProtocol?
     var interactor: HomeInteractorInputProtocol?
-    var wireFrame: HomeWireFrameProtocol?
+    var router: HomeRouterProtocol?
     
 }
 
 extension HomePresenter: HomePresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
+        interactor?.interactorGetData()
     }
 }
 

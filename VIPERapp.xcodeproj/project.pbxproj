@@ -18,7 +18,7 @@
 		9304AEE32485B27B00589C37 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDC2485B27B00589C37 /* HomeInteractor.swift */; };
 		9304AEE42485B27B00589C37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDD2485B27B00589C37 /* HomeView.swift */; };
 		9304AEE52485B27B00589C37 /* HomeRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDE2485B27B00589C37 /* HomeRemoteDataManager.swift */; };
-		9304AEE62485B27B00589C37 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDF2485B27B00589C37 /* HomeWireFrame.swift */; };
+		9304AEE62485B27B00589C37 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDF2485B27B00589C37 /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		9304AEDC2485B27B00589C37 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeInteractor.swift; path = ../HomeInteractor.swift; sourceTree = "<group>"; };
 		9304AEDD2485B27B00589C37 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../HomeView.swift; sourceTree = "<group>"; };
 		9304AEDE2485B27B00589C37 /* HomeRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRemoteDataManager.swift; path = ../HomeRemoteDataManager.swift; sourceTree = "<group>"; };
-		9304AEDF2485B27B00589C37 /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeWireFrame.swift; path = ../HomeWireFrame.swift; sourceTree = "<group>"; };
+		9304AEDF2485B27B00589C37 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRouter.swift; path = ../HomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				9304AEDC2485B27B00589C37 /* HomeInteractor.swift */,
 				9304AEDD2485B27B00589C37 /* HomeView.swift */,
 				9304AEDE2485B27B00589C37 /* HomeRemoteDataManager.swift */,
-				9304AEDF2485B27B00589C37 /* HomeWireFrame.swift */,
+				9304AEDF2485B27B00589C37 /* HomeRouter.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 				9304AEE52485B27B00589C37 /* HomeRemoteDataManager.swift in Sources */,
 				9304AEE02485B27B00589C37 /* HomePresenter.swift in Sources */,
 				9304AEE32485B27B00589C37 /* HomeInteractor.swift in Sources */,
-				9304AEE62485B27B00589C37 /* HomeWireFrame.swift in Sources */,
+				9304AEE62485B27B00589C37 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

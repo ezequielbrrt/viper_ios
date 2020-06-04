@@ -12,4 +12,7 @@ class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol?
     
+    func externalGetData() {
+        
+    }
 }
