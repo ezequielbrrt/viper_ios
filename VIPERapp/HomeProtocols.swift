@@ -55,6 +55,7 @@ protocol HomeRemoteDataManagerInputProtocol: class {
 
 protocol HomeRemoteDataManagerOutputProtocol: class {
     // REMOTEDATAMANAGER -> INTERACTOR
+    func remoteDataManagerCallBackData(with category: [CategoryURL])
 }
 
 protocol HomeLocalDataManagerInputProtocol: class {

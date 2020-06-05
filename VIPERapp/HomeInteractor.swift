@@ -21,5 +21,8 @@ class HomeInteractor: HomeInteractorInputProtocol {
 }
 
 extension HomeInteractor: HomeRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+    
+    func remoteDataManagerCallBackData(with category: [CategoryURL]) {
+        
+    }
 }
