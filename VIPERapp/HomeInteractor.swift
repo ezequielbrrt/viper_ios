@@ -14,7 +14,8 @@ class HomeInteractor: HomeInteractorInputProtocol {
     weak var presenter: HomeInteractorOutputProtocol?
     var localDatamanager: HomeLocalDataManagerInputProtocol?
     var remoteDatamanager: HomeRemoteDataManagerInputProtocol?
-
+    var arrayURL = [DatoURL]()
+    
     func interactorGetData() {
         remoteDatamanager?.externalGetData()
     }
@@ -23,6 +24,15 @@ class HomeInteractor: HomeInteractorInputProtocol {
 extension HomeInteractor: HomeRemoteDataManagerOutputProtocol {
     
     func remoteDataManagerCallBackData(with category: [CategoryURL]) {
+        print("Estoy recibiendo estos datos \(category)")
         
+        for url in category{
+            let urlString = DatoURL(datoURL: url._links.selfito[0].href)
+            arrayURL.append(urlString)
+        }
+        print("Le paso a presentar \(self.arrayURL)")
+        
+        presenter?.interactorPushDataPresenter(receivedData: self.arrayURL)
     }
+    
 }

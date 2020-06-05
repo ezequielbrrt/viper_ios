@@ -20,6 +20,7 @@
 		9304AEE52485B27B00589C37 /* HomeRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDE2485B27B00589C37 /* HomeRemoteDataManager.swift */; };
 		9304AEE62485B27B00589C37 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9304AEDF2485B27B00589C37 /* HomeRouter.swift */; };
 		93384EF5248AA7D300003AE3 /* CategoryURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93384EF4248AA7D300003AE3 /* CategoryURL.swift */; };
+		93384EF7248AAE7F00003AE3 /* DatoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93384EF6248AAE7F00003AE3 /* DatoURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9304AEDE2485B27B00589C37 /* HomeRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRemoteDataManager.swift; path = ../HomeRemoteDataManager.swift; sourceTree = "<group>"; };
 		9304AEDF2485B27B00589C37 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeRouter.swift; path = ../HomeRouter.swift; sourceTree = "<group>"; };
 		93384EF4248AA7D300003AE3 /* CategoryURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryURL.swift; sourceTree = "<group>"; };
+		93384EF6248AAE7F00003AE3 /* DatoURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatoURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				9304AEDE2485B27B00589C37 /* HomeRemoteDataManager.swift */,
 				9304AEDF2485B27B00589C37 /* HomeRouter.swift */,
 				93384EF4248AA7D300003AE3 /* CategoryURL.swift */,
+				93384EF6248AAE7F00003AE3 /* DatoURL.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				9304AECA2485A30200589C37 /* ViewController.swift in Sources */,
 				9304AEC62485A30200589C37 /* AppDelegate.swift in Sources */,
 				93384EF5248AA7D300003AE3 /* CategoryURL.swift in Sources */,
+				93384EF7248AAE7F00003AE3 /* DatoURL.swift in Sources */,
 				9304AEE12485B27B00589C37 /* HomeLocalDataManager.swift in Sources */,
 				9304AEC82485A30200589C37 /* SceneDelegate.swift in Sources */,
 				9304AEE22485B27B00589C37 /* HomeProtocols.swift in Sources */,

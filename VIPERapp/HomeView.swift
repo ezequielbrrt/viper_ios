@@ -13,7 +13,8 @@ class HomeView: UIViewController {
 
     // MARK: Properties
     var presenter: HomePresenterProtocol?
-
+    var arrayViewURL = [DatoURL]()
+    
     // MARK: UIELEMENTS
     var testLabel: UILabel = {
         let label = UILabel()
@@ -23,7 +24,6 @@ class HomeView: UIViewController {
     
     var tableView: UITableView = {
         let tableView = UITableView()
-        
         return tableView
     }()
     
@@ -76,9 +76,40 @@ class HomeView: UIViewController {
         //view.addSubview(testLabel)
         view.addSubview(tableView)
         view.addSubview(loader)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
 extension HomeView: HomeViewProtocol {
-    // TODO: implement view output methods
+    
+    func presenterPushDataView(receivedData: [DatoURL]) {
+        DispatchQueue.main.async {
+            self.arrayViewURL = receivedData
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+}
+
+extension HomeView: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrayViewURL.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = arrayViewURL[indexPath.row].datoURL
+        
+        return cell
+    }
+    
+    
+}
+
+extension HomeView: UITableViewDelegate{
+    
 }
