@@ -12,13 +12,15 @@ import UIKit
 protocol HomeViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: HomePresenterProtocol? { get set }
-    
     func presenterPushDataView(receivedData: [DatoURL])
+    func showActivity()
+    func stopAndHideActivity()
 }
 
 protocol HomeRouterProtocol: class {
     // PRESENTER -> Router
     static func createHomeModule() -> UIViewController
+    func presentNewViewDetail(from view: HomeViewProtocol, withData: DatoURL)
 }
 
 protocol HomePresenterProtocol: class {
@@ -28,6 +30,7 @@ protocol HomePresenterProtocol: class {
     var router: HomeRouterProtocol? { get set }
     
     func viewDidLoad()
+    func showDetailView(with data: DatoURL)
 }
 
 protocol HomeInteractorOutputProtocol: class {

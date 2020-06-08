@@ -21,11 +21,17 @@ extension HomePresenter: HomePresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
         interactor?.interactorGetData()
+        view?.showActivity()
+    }
+    
+    func showDetailView(with data: DatoURL){
+        router?.presentNewViewDetail(from: view!, withData: data)
     }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
     func interactorPushDataPresenter(receivedData: [DatoURL]) {
+        view?.stopAndHideActivity()
         view?.presenterPushDataView(receivedData: receivedData)
     }
 }

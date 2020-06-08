@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class HomeRouter: HomeRouterProtocol {
-
+    
     class func createHomeModule() -> UIViewController {
         
         let view = HomeView()
@@ -36,4 +36,15 @@ class HomeRouter: HomeRouterProtocol {
         
     }
     
+    func presentNewViewDetail(from view: HomeViewProtocol, withData: DatoURL) {
+        let newDetailView = DetailRouter.createDetailModule(with: withData)
+        
+        if let newView = view as? UIViewController{
+            newView.navigationController?.pushViewController(newDetailView, animated: true)
+        }
+        
+        
+    }
+    
 }
+ 

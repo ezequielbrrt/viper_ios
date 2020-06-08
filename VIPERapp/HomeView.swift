@@ -92,6 +92,19 @@ extension HomeView: HomeViewProtocol {
         
     }
     
+    func showActivity() {
+        DispatchQueue.main.async {
+            self.loader.startAnimating()
+        }
+    }
+    
+    func stopAndHideActivity() {
+        DispatchQueue.main.async {
+            self.loader.hidesWhenStopped = true
+            self.loader.stopAnimating()
+        }
+    }
+    
 }
 
 extension HomeView: UITableViewDataSource{
@@ -111,5 +124,7 @@ extension HomeView: UITableViewDataSource{
 }
 
 extension HomeView: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showDetailView(with: arrayViewURL[indexPath.row])
+    }
 }
